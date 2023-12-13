@@ -1,0 +1,37 @@
+/* text styles */
+
+.bigname {
+    color: black;
+    font-size: 125px;
+    margin-top:0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.pagelinks {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-size: 25pt;
+    padding: 20px;
+}
+
+.pagelinks::after {
+    content: ""; /* Empty content is required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(66, 172, 218); /* Background color on hover */
+    z-index: -1; /* Place the pseudo-element behind the text */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.7s ease; /* Transition effect on opacity */
+}
+
+.pagelinks:hover::after {
+    opacity: 1; /* Make the pseudo-element visible on hover */
+  }
+
